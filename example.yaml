@@ -1,0 +1,20 @@
+# Choose which ssh config you want to use.
+sshConfig: /root/.ssh/config
+# Choose a remote ssh host
+sshHost: dev
+remoteKubeConfig: /root/.kube/config
+tunnels:
+  - local:
+      host: localhost
+      port: 5432
+    remote:
+      name: mep-database-ha
+      namespace: mep
+      port: 5432
+  - local:
+      host: localhost
+      port: 5431
+    remote:
+      name: mep-database-replicas
+      namespace: mep
+      port: 5432

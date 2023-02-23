@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "ssh-tunnel-utility"
+version = "0.1.0"
+description = ""
+authors = ["Jira <jira@alphanetworks.com>"]
+readme = "README.md"
+packages = [{include = "ssh_tunnel_utility"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+paramiko = "^3.0.0"
+kubernetes = "^26.1.0"
+sshtunnel = "^0.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
